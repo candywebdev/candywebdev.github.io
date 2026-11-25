@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Portfolio de CandyWebDev: proyectos de diseño y desarrollo web.">
+<meta name="theme-color" content="#17171c">
+<title>CandyWebDev | Portfolio</title>
+<style>
+:root{--bg:#17171c;--panel:#222229;--panel2:#292932;--ink:#f4f1f4;--muted:#b4adb8;--pink:#f08ab8;--pink2:#ffb5d3;--line:#3a3741;--white:#fff}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}a{color:inherit;text-decoration:none}.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+header{position:sticky;top:0;z-index:10;background:#17171ceF;backdrop-filter:blur(15px);border-bottom:1px solid var(--line)}.nav{height:76px;display:flex;align-items:center;justify-content:space-between}.brand{font-size:1.18rem;font-weight:900;letter-spacing:-.7px}.brand span{color:var(--pink)}nav{display:flex;gap:26px;align-items:center;font-size:.92rem;font-weight:700;color:#d5cfd8}nav a:hover{color:var(--pink2)}.nav-contact{background:var(--pink);color:#231720;padding:10px 18px;border-radius:999px}.menu{display:none}
+.hero{padding:94px 0 78px;background:radial-gradient(ellipse at 80% 15%,#49283b66 0,transparent 42%),var(--bg)}.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:54px;align-items:center}.eyebrow,.kicker{font-size:.76rem;letter-spacing:1.8px;text-transform:uppercase;font-weight:850;color:var(--pink)}.eyebrow:before{content:"";display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--pink);box-shadow:0 0 0 5px #f08ab822;margin-right:12px}h1{font-size:clamp(2.9rem,6vw,5.4rem);line-height:1.02;letter-spacing:-3.8px;margin:22px 0}.pink{color:var(--pink)}.lead{font-size:1.13rem;color:var(--muted);max-width:610px;margin:0 0 30px}.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 21px;border-radius:999px;font-weight:800;border:1px solid var(--pink);transition:.2s}.btn.primary{background:var(--pink);color:#241821}.btn.outline{color:var(--pink2);background:transparent;border-color:#a95d82}.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px #f08ab822}
+.visual{background:linear-gradient(145deg,#2d2b34,#202027);border:1px solid #51404c;border-radius:28px;padding:25px;min-height:330px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 25px 60px #0005;position:relative;overflow:hidden}.visual:after{content:"</>";position:absolute;right:-6px;bottom:-48px;font-size:10rem;font-weight:950;color:#f08ab812}.visual-label{font-size:.75rem;color:var(--pink2);font-weight:850;letter-spacing:1.5px;text-transform:uppercase}.code{font: .95rem/2 ui-monospace,Consolas,monospace;color:#e8dfe7;position:relative;z-index:1}.code b{color:var(--pink)}.visual-bottom{font-weight:850;font-size:1.3rem;position:relative;z-index:1}.visual-bottom small{display:block;color:var(--muted);font-size:.9rem;font-weight:500}
+section{padding:76px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:30px}h2{font-size:clamp(2rem,4vw,3rem);line-height:1.1;letter-spacing:-1.7px;margin:9px 0 0}.intro{max-width:450px;color:var(--muted);margin:0}.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}.project{background:var(--panel);border:1px solid var(--line);border-radius:21px;overflow:hidden;transition:.22s}.project:hover{transform:translateY(-4px);border-color:#87516d;box-shadow:0 18px 45px #0004}.project-art{height:205px;padding:21px;display:flex;align-items:stretch;background:linear-gradient(135deg,#303039,#5c344a)}.project-art.pink-bg{background:linear-gradient(135deg,#392a35,#a85e83)}.project-art.gray-bg{background:linear-gradient(135deg,#303039,#68636e)}.project-art.black-bg{background:linear-gradient(135deg,#17171c,#41414b)}.browser{width:100%;background:#f8f5f7;border-radius:12px;padding:12px;display:flex;flex-direction:column;gap:9px;box-shadow:0 12px 25px #0004}.browser-top{display:flex;gap:5px}.browser-top i{width:7px;height:7px;border-radius:50%;background:#b7aeb7}.browser-line{height:9px;width:42%;border-radius:8px;background:#8f536f}.browser-hero{flex:1;border-radius:7px;background:linear-gradient(120deg,#f2bfd5,#a75b81);display:grid;place-items:center;color:#34212c;font-weight:900;letter-spacing:1px;text-align:center;padding:8px}.browser-hero.gray{background:linear-gradient(120deg,#c8c4cb,#77727d)}.browser-hero.black{background:linear-gradient(120deg,#44414a,#1d1d23);color:#f4eaf0}.browser-cards{display:flex;gap:6px}.browser-cards i{height:18px;flex:1;background:#e4dfe4;border-radius:4px}.project-body{padding:22px 23px 24px}.type{font-size:.72rem;text-transform:uppercase;letter-spacing:1.25px;color:var(--pink);font-weight:850}.project h3{font-size:1.3rem;margin:7px 0}.project p{margin:0;color:var(--muted);font-size:.94rem}.project-link{display:inline-flex;margin-top:15px;color:var(--pink2);font-weight:800;font-size:.9rem}.project-link:hover{color:white}
+.about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:52px}.about-note{background:linear-gradient(135deg,#332630,#29252e);border:1px solid #644057;border-radius:22px;padding:27px;color:#f7d7e6;font-size:1.18rem;font-weight:750;line-height:1.45}.about-copy p{color:var(--muted)}.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{background:var(--panel);border:1px solid var(--line);border-radius:99px;padding:8px 14px;color:#f1dce7;font-size:.88rem;font-weight:750}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:22px;background:var(--panel);border:1px solid var(--line);border-radius:18px}.step b{font-size:.76rem;letter-spacing:1px;color:var(--pink)}.step h3{margin:9px 0 5px}.step p{margin:0;color:var(--muted);font-size:.92rem}
+.contact{background:linear-gradient(120deg,#352531,#24232b);border:1px solid #67445a;border-radius:26px;padding:43px;display:flex;align-items:center;justify-content:space-between;gap:28px}.contact p{color:var(--muted);margin-bottom:0}.contact .btn{white-space:nowrap}footer{padding:28px 0 36px;color:#99919c;font-size:.85rem}.footer-row{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}.footer-row strong{color:var(--pink2)}
+@media(max-width:800px){.hero-grid,.about-grid{grid-template-columns:1fr;gap:30px}.section-head{display:block}.intro{margin-top:12px}.steps{grid-template-columns:1fr}.contact{display:block}.contact .btn{margin-top:22px}}
+@media(max-width:620px){.wrap{width:calc(100% - 30px)}.nav{height:67px}.menu{display:block;border:0;background:none;color:var(--pink);font-size:1.5rem}nav{display:none;position:absolute;top:67px;left:0;right:0;padding:20px;background:var(--panel);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}nav.open{display:flex}.hero{padding:62px 0 54px}h1{letter-spacing:-2.3px}.projects{grid-template-columns:1fr}section{padding:58px 0}.project-art{height:185px}.contact{padding:30px 24px}}
+
+/* Efectos suaves CandyWebDev */
+@keyframes contactGlow {
+  0%,100% { box-shadow: 0 0 18px rgba(240,138,184,.12), 0 0 42px rgba(240,138,184,.05); border-color:#67445a; }
+  50% { box-shadow: 0 0 28px rgba(240,138,184,.32), 0 0 70px rgba(240,138,184,.14); border-color:#d47aa5; }
+}
+@keyframes pinkPulse {
+  0%,100% { text-shadow:0 0 7px rgba(240,138,184,.2); }
+  50% { text-shadow:0 0 18px rgba(240,138,184,.75), 0 0 34px rgba(240,138,184,.3); }
+}
+@keyframes softFloat {
+  0%,100% { transform:translateY(0); }
+  50% { transform:translateY(-7px); }
+}
+.contact {
+  position:relative;
+  overflow:hidden;
+  animation:contactGlow 4.5s ease-in-out infinite;
+}
+.contact:before {
+  content:"";
+  position:absolute;
+  width:340px;height:340px;
+  right:-100px;top:-190px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(240,138,184,.22),transparent 68%);
+  pointer-events:none;
+}
+.contact h2 { animation:pinkPulse 4.5s ease-in-out infinite; }
+.contact > * { position:relative; z-index:1; }
+.project { transition:transform .28s ease, border-color .28s ease, box-shadow .28s ease; }
+.project:hover {
+  transform:translateY(-7px);
+  border-color:#d47aa5;
+  box-shadow:0 18px 45px rgba(240,138,184,.13),0 0 0 1px rgba(240,138,184,.12);
+}
+.btn { transition:transform .25s ease, box-shadow .25s ease, filter .25s ease; }
+.btn:hover { filter:brightness(1.08); box-shadow:0 0 22px rgba(240,138,184,.28); }
+.visual { animation:softFloat 6s ease-in-out infinite; }
+.reveal {
+  opacity:0;
+  transform:translateY(22px);
+  transition:opacity .7s ease, transform .7s ease;
+}
+.reveal.visible { opacity:1; transform:translateY(0); }
+@media (prefers-reduced-motion:reduce) {
+  *,*::before,*::after { animation:none !important; scroll-behavior:auto !important; transition:none !important; }
+  .reveal { opacity:1; transform:none; }
+}
+
+
+/* Borde negro grafito reflectante, fino y con luz interior */
+.skill {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border: 1px solid #55545d;
+  background: linear-gradient(135deg, #29292f 0%, #17171c 58%, #34343b 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .13),
+              inset 0 1px 5px rgba(255, 255, 255, .08),
+              0 0 7px rgba(0, 0, 0, .35);
+  transition: border-color .25s ease, box-shadow .25s ease, transform .25s ease;
+}
+.skill::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  left: -75%;
+  width: 48%;
+  height: 180%;
+  transform: skewX(-22deg);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .32), transparent);
+  animation: skillShine 5.5s ease-in-out infinite;
+  pointer-events: none;
+}
+.skill:hover {
+  transform: translateY(-2px);
+  border-color: #aaa9b2;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .22),
+              inset 0 1px 7px rgba(255, 255, 255, .13),
+              0 0 9px rgba(220, 220, 230, .22),
+              0 0 17px rgba(0, 0, 0, .5);
+}
+@keyframes skillShine {
+  0%, 65%, 100% { left: -75%; opacity: 0; }
+  72% { opacity: 1; }
+  90% { left: 135%; opacity: .7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .skill::after { animation: none; }
+}
+
+</style>
+</head>
+<body>
+<header><div class="wrap nav"><a class="brand" href="#inicio">Candy<span>WebDev</span>.</a><button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button><nav id="nav"><a href="#inicio">Inicio</a><a href="#proyectos">Proyectos</a><a href="#sobre-mi">Sobre mí</a><a href="#habilidades">Habilidades</a><a class="nav-contact" href="#contacto">Contacto</a></nav></div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid"><div><div class="eyebrow">Diseño · Desarrollo web</div><h1>Diseño digital con <span class="pink">personalidad.</span></h1><p class="lead">Soy Candy. En este portfolio reúno mis proyectos de diseño y desarrollo web, mis ideas y todo lo que voy creando mientras sigo aprendiendo.</p><div class="actions"><a class="btn primary" href="#proyectos">Explorar proyectos</a><a class="btn outline" href="#sobre-mi">Sobre mí</a></div></div><div class="visual"><div class="visual-label">CandyWebDev / espacio creativo</div><div class="code"><div>// ideas que se convierten en web</div><div><b>const</b> creatividad = true;</div><div><b>const</b> detalle = "importa";</div><div><b>function</b> crearProyecto() {</div><div>&nbsp;&nbsp;return diseño + código;</div><div>}</div></div><div class="visual-bottom">Diseño con carácter.<small>Desarrollo con propósito.</small></div></div></div></section>
+<section id="proyectos"><div class="wrap"><div class="section-head"><div><div class="kicker">Selección de trabajos</div><h2>Mis proyectos</h2></div><p class="intro">Aquí irás incorporando tus páginas y trabajos. Cada tarjeta puede enlazar a la web publicada o a una presentación del proyecto.</p></div><div class="projects">
+<article class="project"><div class="project-art"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-line"></div><div class="browser-hero">FINCA EL SEMBRADOR</div><div class="browser-cards"><i></i><i></i><i></i></div></div></div><div class="project-body"><div class="type">HTML · CSS · JavaScript</div><h3>Finca El Sembrador</h3><p>Web de presentación para una finca de productos de temporada, con información, galería y contacto.</p><a class="project-link" href="https://candywebdev.github.io/landing-page-web/" target="_blank" rel="noopener">Visitar página ↗</a></div></article>
+<article class="project"><div class="project-art pink-bg"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-line"></div><div class="browser-hero">RJL SERVICIOS</div><div class="browser-cards"><i></i><i></i><i></i></div></div></div><div class="project-body"><div class="type">WordPress · Elementor</div><h3>RJL Servicios</h3><p>Web corporativa de servicios y reformas, con apartados de empresa, servicios, galería y portfolio.</p><span class="project-link">Enlace pendiente de añadir</span></div></article>
+<article class="project"><div class="project-art gray-bg"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-line"></div><div class="browser-hero gray">ENTRE CAZUELAS</div><div class="browser-cards"><i></i><i></i><i></i></div></div></div><div class="project-body"><div class="type">WordPress · Gastronomía</div><h3>Entre Cazuelas</h3><p>Proyecto gastronómico de recetas y cocina, organizado por categorías y con identidad visual propia.</p><span class="project-link">Enlace pendiente de añadir</span></div></article>
+<article class="project"><div class="project-art pink-bg"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-line"></div><div class="browser-hero">MODA CHIC</div><div class="browser-cards"><i></i><i></i><i></i></div></div></div><div class="project-body"><div class="type">Moda · Diseño web</div><h3>Moda Chic</h3><p>Proyecto web dedicado al mundo de la moda, con una presentación elegante para mostrar prendas, tendencias y novedades.</p><span class="project-link">Enlace pendiente de añadir</span></div></article>
+<article class="project"><div class="project-art black-bg"><div class="browser"><div class="browser-top"><i></i><i></i><i></i></div><div class="browser-line"></div><div class="browser-hero black">CANDY WEBDEV</div><div class="browser-cards"><i></i><i></i><i></i></div></div></div><div class="project-body"><div class="type">Diseño · Desarrollo · Prácticas</div><h3>Otros trabajos</h3><p>Este espacio queda preparado para añadir nuevas páginas, ejercicios y proyectos personales.</p><span class="project-link">Próximamente</span></div></article>
+</div></div></section>
+<section id="sobre-mi"><div class="wrap about-grid"><div><div class="kicker">Conóceme</div><h2>Aprender, crear y dar forma a ideas.</h2></div><div class="about-copy"><div class="about-note">Me gusta construir páginas web que tengan personalidad y sean sencillas de utilizar.</div><p>Estoy desarrollando mis habilidades en diseño y desarrollo web. En este espacio presento mis trabajos, mi evolución y las herramientas con las que voy dando forma a cada proyecto.</p><p>Me interesa cuidar la estructura, los detalles visuales y la experiencia de navegación, creando páginas adaptables a distintos dispositivos.</p></div></div></section>
+<section id="habilidades"><div class="wrap"><div class="section-head"><div><div class="kicker">Tecnologías y herramientas</div><h2>Lo que utilizo</h2></div><p class="intro">Una selección de tecnologías y plataformas con las que he trabajado y sigo practicando.</p></div><div class="skills"><span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">JavaScript</span><span class="skill">PHP</span><span class="skill">WordPress</span><span class="skill">Elementor</span><span class="skill">Diseño responsive</span><span class="skill">GitHub</span></div></div></section>
+<section><div class="wrap"><div class="section-head"><div><div class="kicker">Mi proceso</div><h2>De la idea al resultado</h2></div></div><div class="steps"><article class="step"><b>01 / PLANIFICAR</b><h3>Definir el objetivo</h3><p>Organizar el contenido, la estructura y las necesidades de cada proyecto.</p></article><article class="step"><b>02 / DISEÑAR</b><h3>Crear la identidad</h3><p>Dar forma al estilo visual y a una navegación clara y coherente.</p></article><article class="step"><b>03 / DESARROLLAR</b><h3>Construir la web</h3><p>Maquetar, adaptar a móviles y revisar el resultado.</p></article></div></div></section>
+<section id="contacto"><div class="wrap"><div class="contact"><div><div class="kicker">Contacto</div><h2>¿Hablamos de tu próximo proyecto?</h2><p>Estoy abierta a compartir ideas, conocer proyectos y seguir creciendo en el mundo web.</p></div><a class="btn primary" href="https://github.com/candywebdev" target="_blank" rel="noopener">Mi GitHub ↗</a></div></div></section>
+</main>
+<footer><div class="wrap footer-row"><strong>CandyWebDev.</strong><span>Portfolio personal · Diseño y desarrollo web</span><span>© <span id="year"></span> CandyWebDev</span></div></footer>
+<script>
+const menuButton=document.querySelector('.menu'),nav=document.querySelector('#nav');
+menuButton.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuButton.setAttribute('aria-expanded',String(open));menuButton.textContent=open?'×':'☰'});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menuButton.setAttribute('aria-expanded','false');menuButton.textContent='☰'}));
+document.querySelector('#year').textContent=new Date().getFullYear();
+
+// Aparición progresiva al desplazarse por la página
+const revealItems = document.querySelectorAll(
+  '.section-head, .project, .about-grid, .skill, .step, .contact'
+);
+revealItems.forEach(item => item.classList.add('reveal'));
+
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealItems.forEach(item => revealObserver.observe(item));
+} else {
+  revealItems.forEach(item => item.classList.add('visible'));
+}
+
+</script>
+</body></html>
